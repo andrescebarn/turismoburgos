@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aranda de Duero</title>
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+  <header>
+    <h1>Aranda de Duero</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="pagina1.html">Aranda</a>
+    <a href="pagina2.html">Lerma</a>
+    <a href="pagina3.html">Contacto</a>
+  </nav>
+  <main>
+    <p>Aranda de Duero es una localidad situada al sur de Burgos, famosa por su vino Ribera del Duero y sus bodegas subterráneas. Es un importante destino enoturístico y cultural.</p>
+
+    <h2>Lugares de interés</h2>
+    <ul>
+      <li><strong>Iglesia de Santa María la Real</strong>  
+        <br>Esta iglesia es uno de los ejemplos más destacados del románico en la región, con elementos góticos añadidos en reformas posteriores. Se encuentra en un enclave histórico y ha sido declarada Bien de Interés Cultural. En su interior podrás admirar un imponente retablo mayor, restos de policromía original, y criptas subterráneas. Además, es común encontrar exposiciones temporales y conciertos de música sacra en su interior debido a su acústica privilegiada.
+        <br>Horario: 10:00 - 13:30 y 16:30 - 19:30  
+        <br>Precio: 3€ entrada general
+      </li>
+      <li><strong>Bodegas subterráneas</strong> (visitas guiadas)  
+        <br>Horario: 11:00, 13:00, 17:00  
+        <br>Precio: 8€ adultos, 4€ niños
+        <br>Las bodegas subterráneas son una red de galerías excavadas en la roca, que datan de varios siglos atrás. Utilizadas históricamente para la conservación del vino gracias a su temperatura constante y alta humedad, hoy ofrecen una experiencia inmersiva. Durante la visita guiada, podrás recorrer túneles centenarios, conocer el proceso tradicional de elaboración del vino y, en muchos casos, disfrutar de una cata. Es una de las actividades más auténticas para entender la importancia del vino en la cultura local. 
+      </li>
+      <li><strong>Centro de Interpretación del Vino</strong>  
+        <br>Horario: 10:00 - 14:00 y 17:00 - 20:00  
+        <br>Precio: Gratis
+        <br> Este centro moderno y didáctico está diseñado para divulgar la historia, cultura y técnicas de la viticultura de la zona. Cuenta con paneles interactivos, proyecciones audiovisuales y recreaciones de viñedos. Es ideal para introducirse en el mundo del vino antes o después de una visita a las bodegas. También puede incluir exposiciones temporales, catas gratuitas o actividades para niños relacionadas con el campo y la enología.
+      </li>
+    </ul>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/4d/50/ec/iglesia-de-santa-maria.jpg" alt="Iglesia Santa María" style="width:300px;margin:10px;">
+        <div class="text">Iglesia de Santa María la Real</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="https://www.terranostrum.es/images/content/full/bodegas-aranda-de-duero-13.jpg" alt="Bodega Subterránea" style="width:300px;margin:10px;">
+        <div class="text">Bodegas subterráneas</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="https://www.museosdelvino.es/wp-content/uploads/2018/02/aranda-duero-4.jpg" alt="Centro del Vino" style="width:300px;margin:10px;">
+        <div class="text">Centro de Interpretación del Vino</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+    
+
+    <p>¿Tienes dudas? Consulta la <a href="https://sede.arandadeduero.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS2_JUNTA" target="_blank">Junta de Aranda</a>.</p>
+  </main>
+  <footer>
+    &copy; 2025 - Web Turística de Burgos
+  </footer>
+</body>
+</html>

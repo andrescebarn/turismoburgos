@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lerma</title>
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+  <header>
+    <h1>Lerma</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="pagina1.html">Aranda</a>
+    <a href="pagina2.html">Lerma</a>
+    <a href="pagina3.html">Contacto</a>
+  </nav>
+  <main>
+    <p>Lerma es una villa ducal reconocida por su historia barroca, su plaza mayor y su conjunto arquitectónico único. Fue un importante centro de poder en la corte de Felipe III.</p>
+
+    <h2>Monumentos y atracciones turísticas</h2>
+    <ul>
+      <li><strong>Palacio Ducal (Parador Nacional)</strong>  
+        <br>Visita: zonas exteriores y algunas salas  
+        <br>Horario: 10:00 - 18:00  
+        <br>Precio: 5€
+        <br>El Palacio Ducal es una antigua residencia señorial, típicamente vinculada a la nobleza local. Muchos de estos palacios fueron transformados en Paradores Nacionales, lo que significa que ahora funcionan como hoteles históricos gestionados por la red de Paradores de España. Aun así, gran parte del edificio suele conservar su estructura original, y algunas zonas están abiertas al público para visitas culturales.
+      </li>
+      <li><strong>Plaza Mayor</strong>  
+        <br>Visita libre todo el día  
+        <br>Precio: Gratis
+        <br>La Plaza Mayor suele ser el centro neurálgico de la ciudad o villa, rodeada por edificios históricos, soportales, y frecuentemente por el ayuntamiento, iglesias o mercados. Es un espacio ideal para pasear, tomar algo en una terraza y disfrutar del ambiente local.
+      </li>
+      <li><strong>Convento de San Blas</strong>  
+        <br>Horario: 10:30 - 13:30 y 17:00 - 19:00  
+        <br>Precio: 3€
+        <br>Este convento, fundado en época medieval o moderna, solía estar habitado por una comunidad religiosa (frecuentemente dominicas o clarisas). Algunos todavía están en uso religioso, mientras que otros funcionan como espacios museísticos o de interpretación del patrimonio.
+      </li>
+    </ul>
+    <div id="slideshow-container">
+      <div class="mySlides fade">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Parador_de_Lerma_5.jpg/220px-Parador_de_Lerma_5.jpg" alt="Palacio Ducal" style="width:300px;margin:10px;">
+        <div class="text">Palacio Ducal (Parador Nacional)</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="https://www.monumentalnet.org/datos/burgos/lerma/lerma/plaza_mayor_de_lerma/BU-194000200-LER-PZA-MAY-LER-0010002.jpg" alt="Plaza Mayor" style="width:300px;margin:10px;">
+        <div class="text">Plaza Mayor</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="https://www.vipavi.es/wp-content/uploads/2019/05/Lerma-Convento-San-Blas.jpg" alt="Convento de San Blas" style="width:300px;margin:10px;">
+        <div class="text">Convento de San Blas</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+   
+
+    <p>¿Tienes dudas? Consulta la <a href="https://lerma.sedelectronica.es/info.0" target="_blank">Junta de Lerma</a>.</p>
+  </main>
+  <footer>
+    &copy; 2025 - Web Turística de Burgos
+  </footer>
+</body>
+</html>
+
